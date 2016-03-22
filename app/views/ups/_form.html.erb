@@ -1,0 +1,26 @@
+<%= form_for(@up, :html => { multipart: true }) do |f| %>
+  <% if @up.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@up.errors.count, "error") %> prohibited this up from being saved:</h2>
+
+      <ul>
+      <% @up.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :usuario %><br>
+    <%= f.text_field :usuario, value: 'invitado' %>
+  </div>
+  <div class="field">
+    <%= f.label :adjunto %><br>
+    <%#= f.text_field :adjunto %>
+    <%= f.file_field :adjunto %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

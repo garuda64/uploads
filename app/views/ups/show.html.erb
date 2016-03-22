@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @up.usuario %>
+</p>
+
+<p>
+  <strong>Adjunto:</strong>
+  <%= @up.adjunto %>
+</p>
+
+<%= link_to 'Edit', edit_up_path(@up) %> |
+<%= link_to 'Back', ups_path %>
