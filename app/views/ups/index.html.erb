@@ -16,9 +16,9 @@
       <tr>
         <td><%= up.usuario %></td>
         <td><%= up.adjunto %></td>
-        <td><%= link_to 'Show', up %></td>
-        <td><%= link_to 'Edit', edit_up_path(up) %></td>
-        <td><%= link_to 'Destroy', up, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Ver', up %></td>
+        <td><%= link_to 'Editar', edit_up_path(up) %></td>
+        <td><%= link_to 'Eliminar', up, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
