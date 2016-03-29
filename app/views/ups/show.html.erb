@@ -11,7 +11,7 @@
 </p>
 <p>
 	<strong>Download:</strong>
-	<%= link_to 'Descargar', root_path << "#{@registro.libreto_filename}", { target: '_blank' } %>
+	<%= link_to 'Descargar', root_url + @up.adjunto, { target: '_blank' } %>
 </p>
 
 <%= link_to 'Editar', edit_up_path(@up) %> |
