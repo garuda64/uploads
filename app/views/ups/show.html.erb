@@ -9,6 +9,10 @@
   <strong>Adjunto:</strong>
   <%= @up.adjunto %>
 </p>
+<p>
+	<strong>Download:</strong>
+	<%= link_to 'Descargar', root_url + @up.adjunto, { target: '_blank' } %>
+</p>
 
 <%= link_to 'Editar', edit_up_path(@up) %> |
 <%= link_to 'Atras', ups_path %>
