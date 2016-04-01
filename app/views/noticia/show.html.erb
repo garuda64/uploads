@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+<%#= @var %>
+<%#= @noticium %>
+<p>
+  <strong>Titulo:</strong>
+  <%= @noticium.titulo %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @noticium.descripcion %>
+</p>
+
+<p>
+  <strong>Iframe:</strong>
+  <%= @noticium.iframe %>
+</p>
+
+<p>
+  <strong>Categoria:</strong>
+  <%= @noticium.categoria %>
+</p>
+
+<p>
+  <strong>Publicar:</strong>
+  <%= @noticium.publicar %>
+</p>
+
+<p>
+  <strong>Visible:</strong>
+  <%= @noticium.visible %>
+</p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @noticium.usuario %>
+</p>
+
+<%= link_to 'Edit', edit_noticium_path(@noticium) %> |
+<%= link_to 'Back', noticia_path %>

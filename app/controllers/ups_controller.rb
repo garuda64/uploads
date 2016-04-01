@@ -1,5 +1,6 @@
 class UpsController < ApplicationController
   before_action :set_up, only: [:show, :edit, :update, :destroy]
+  include UpsHelper
 
   # GET /ups
   # GET /ups.json
@@ -34,6 +35,7 @@ class UpsController < ApplicationController
 
     respond_to do |format|
       if @up.save
+        Record_Cache(@up)
         Sendmail.send_email(archivo_adjunto).deliver_now
         format.html { redirect_to @up, notice: 'Up was successfully created.' }
         format.json { render :show, status: :created, location: @up }

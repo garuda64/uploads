@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Noticia</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Descripcion</th>
+      <th>Iframe</th>
+      <th>Categoria</th>
+      <th>Publicar</th>
+      <th>Visible</th>
+      <th>Usuario</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @noticia.each do |noticium| %>
+      <tr>
+        <td><%= noticium.titulo %></td>
+        <td><%= noticium.descripcion %></td>
+        <td><%= noticium.iframe %></td>
+        <td><%= noticium.categoria %></td>
+        <td><%= noticium.publicar %></td>
+        <td><%= noticium.visible %></td>
+        <td><%= noticium.usuario %></td>
+        <td><%= link_to 'Show', noticium %></td>
+        <td><%= link_to 'Edit', edit_noticium_path(noticium) %></td>
+        <td><%= link_to 'Destroy', noticium, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Noticium', new_noticium_path %>

@@ -11,13 +11,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160216220816) do
+ActiveRecord::Schema.define(version: 20160401172055) do
+
+  create_table "news", force: :cascade do |t|
+    t.string   "titulo",      limit: 255
+    t.text     "descripcion", limit: 65535
+    t.text     "iframe",      limit: 65535
+    t.string   "categoria",   limit: 255
+    t.date     "publicar"
+    t.boolean  "visible"
+    t.string   "usuario",     limit: 255
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  create_table "noticia", force: :cascade do |t|
+    t.string   "titulo",      limit: 255
+    t.text     "descripcion", limit: 65535
+    t.text     "iframe",      limit: 65535
+    t.string   "categoria",   limit: 255
+    t.date     "publicar"
+    t.boolean  "visible"
+    t.string   "usuario",     limit: 255
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
 
   create_table "ups", force: :cascade do |t|
-    t.string   "usuario"
-    t.string   "adjunto"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "usuario",    limit: 255
+    t.string   "adjunto",    limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
 end
