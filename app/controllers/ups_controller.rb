@@ -1,6 +1,5 @@
 class UpsController < ApplicationController
   before_action :set_up, only: [:show, :edit, :update, :destroy]
-  include UpsHelper
 
   # GET /ups
   # GET /ups.json
