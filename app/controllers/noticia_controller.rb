@@ -66,7 +66,11 @@ class NoticiaController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_noticium
       #@noticium = Noticium.find(params[:id])
-      @noticium = JSON.parse(File.read("public/DatasB/records/#{params[:id].to_i}.json"), object_class: OpenStruct)
+      if action_name == 'edit'
+        @noticium = Noticium.find(params[:id])
+      else
+        @noticium = JSON.parse(File.read("public/DatasB/records/#{params[:id].to_i}.json"), object_class: OpenStruct)
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
