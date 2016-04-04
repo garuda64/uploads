@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :programas
   resources :noticia
   resources :ups
   # The priority is based upon order of creation: first created -> highest priority.
