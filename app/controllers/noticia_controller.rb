@@ -1,6 +1,6 @@
 class NoticiaController < ApplicationController
   before_action :set_noticium, only: [:show, :edit, :update, :destroy]
-
+  include NoticiaHelper
   # GET /noticia
   # GET /noticia.json
   def index
