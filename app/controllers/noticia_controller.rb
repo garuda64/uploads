@@ -1,5 +1,6 @@
 class NoticiaController < ApplicationController
   before_action :set_noticium, only: [:show, :edit, :update, :destroy]
+  include NoticiaHelper
 
   # GET /noticia
   # GET /noticia.json
@@ -56,6 +57,9 @@ class NoticiaController < ApplicationController
   # DELETE /noticia/1.json
   def destroy
     @noticium.destroy
+    if File.exist?("public/DatasB/records/#{params[:id].to_i}.json")
+      File.delete("public/DatasB/records/#{params[:id].to_i}.json")
+    end
     respond_to do |format|
       format.html { redirect_to noticia_url, notice: 'Noticium was successfully destroyed.' }
       format.json { head :no_content }
@@ -66,9 +70,18 @@ class NoticiaController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_noticium
       #@noticium = Noticium.find(params[:id])
+<<<<<<< HEAD
       if action_name == 'edit'
         @noticium = Noticium.find(params[:id])
       else
+=======
+      if action_name == 'edit' || action_name == 'update' || action_name == 'destroy'
+        @noticium = Noticium.find(params[:id])
+      else
+        if !File.exist?("public/DatasB/records/#{params[:id].to_i}.json")
+          cache_record(@noticium = Noticium.find(params[:id]))
+        end
+>>>>>>> origin/master
         @noticium = JSON.parse(File.read("public/DatasB/records/#{params[:id].to_i}.json"), object_class: OpenStruct)
       end
     end
