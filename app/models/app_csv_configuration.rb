@@ -1,0 +1,2 @@
+class AppCsvConfiguration < ApplicationRecord
+end

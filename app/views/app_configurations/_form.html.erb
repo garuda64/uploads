@@ -1,0 +1,39 @@
+<div class="card" style="width: 40rem;">
+  <div class="card-body">
+    <h5 class="card-title">Panel AppConfigurations</h5>
+    <p class="card-text">
+      <%= form_with(model: app_configuration, local: true) do |form| %>
+        <% if app_configuration.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(app_configuration.errors.count, "error") %> prohibited this app_configuration from being saved:</h2>
+
+            <ul>
+            <% app_configuration.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="field">
+          <%= form.label :sorteo_type %>
+          <%= form.text_field :sorteo_type %>
+        </div>
+
+        <div class="field">
+          <%= form.label :sorteo_banner_url %>
+          <%= form.text_area :sorteo_banner_url %>
+        </div>
+
+        <div class="field">
+          <%= form.label :sorteo_timeout %>
+          <%= form.number_field :sorteo_timeout %>
+        </div>
+
+        <div class="actions">
+          <%= form.submit %>
+        </div>
+      <% end %>
+      </p>
+  </div>
+</div>

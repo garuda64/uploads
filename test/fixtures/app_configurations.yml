@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sorteo_type: MyString
+  sorteo_banner_url: MyText
+  sorteo_timeout: 1
+
+two:
+  sorteo_type: MyString
+  sorteo_banner_url: MyText
+  sorteo_timeout: 1

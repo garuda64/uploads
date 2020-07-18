@@ -1,0 +1,27 @@
+<div class="card" style="width: 40rem;">
+  <div class="card-body">
+    <h5 class="card-title">Panel AppConfigurations</h5>
+    <p class="card-text">
+      <p id="notice"><%= notice %></p>
+
+      <p>
+        <strong>Sorteo type:</strong>
+        <%= @app_configuration.sorteo_type %>
+      </p>
+    
+      <p>
+        <strong>Sorteo banner url:</strong>
+        <%= @app_configuration.sorteo_banner_url %>
+      </p>
+    
+      <p>
+        <strong>Sorteo timeout:</strong>
+        <%= @app_configuration.sorteo_timeout %>
+      </p>
+    
+      <%= link_to 'Edit', edit_app_configuration_path(@app_configuration) %> |
+      <%= link_to 'Back', app_configurations_path %>
+    </p>
+  </div>
+</div>
+  

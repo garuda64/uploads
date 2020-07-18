@@ -1,0 +1,19 @@
+<div class="DivCenter">
+    <%= hidden_field_tag 'banners', @banners  %>
+    <%= image_tag("Logo-confiar.png", width: '300', class:"Logo") %>
+    <div class="row">
+        <div class="RowBanner">            
+            <div class="col">
+                <%= image_tag("Slider-sorteo-casa.png", width: '700', id: 'bannerImg') %>
+            </div>            
+        </div>
+    </div>
+    <br>
+    <div>
+        <div class="col ButtonsActions">           
+            <%= button_tag "Sorteo Casa", :onclick => "GoToSorteoCasa()", class: 'btn btn-small ButtonSorteoVivienda ButtonStyle', remote: true %>                                     
+            <%= button_tag "Mejora de vivienda Antioquia y Eje Cafetero", :onclick => "GoToSorteoMejora()", class: 'btn btn-small ButtonMejoraVivienda ButtonStyle', remote: true %>
+            <%= button_tag "Mejora de vivienda Nacional", :onclick => "GoToSorteoMejoraNacional()", class: 'btn btn-small ButtonSorteoVivienda ButtonStyle', remote: true %>                
+        </div>
+    </div       
+</div>

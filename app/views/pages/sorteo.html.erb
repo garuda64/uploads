@@ -1,0 +1,71 @@
+<div class="DivCenter">
+    <%= hidden_field_tag 'timeout', @sorteo.sorteo_timeout  %>
+    <%= hidden_field_tag 'url_banner', 'https://value.com'  %>
+    <%= hidden_field_tag 'databaseName', @databaseName %>
+    <%= image_tag("Logo-superior-ruleta.png", width: '170', class:"LogoSorteo") %>
+    <div class="row RowStyleSorteo">
+        <div class="col-4">
+            <div onclick = "ShuffleIds()">
+                <%= image_tag("Boton-confianza.png", width: '250', id: 'btnImage', class:"ButtonConfianzaLogo") %>
+            </div>
+        </div>
+        <div class="col-8 ColumNombreGanador">
+            <h3 id="tipoSorteo" class="TipoSorteo">
+                <%= @sorteo.sorteo_type %>
+            </h3>
+            <div class="ImageNombreGanador">
+                <h4 id="nombre" class="TextNombreGanador">Nombre</h4>
+            </div>            
+        </div>
+    </div>
+    <div class="row d-flex align-items-end ml-auto justify-content-center RownTarjetas">
+        <div class="col-4">
+            <div class="BoxTimeStyle BoxShadow">
+                <ul class="ListFormat">
+                    <li>&nbsp;</li>
+                    <li class="col LabelsProyect">
+                        <%= image_tag("Reloj-tiempo.png", width: '50px', class:"") %>
+                    </li>
+                    <li>&nbsp;</li>
+                    <li class="col LabelsProyect">
+                        <label class="LabelTiempo">Tiempo</label>
+                    </li>
+                    <h3 id="tiempo" class="LabelsProyect LabelTiempoNumero">00:00</h3>                  
+                </ul>
+            </div>
+        </div>
+        <div class="col-4">                    
+            <div class="BoxSedeStyle BoxShadow">
+                <ul class="ListFormat">
+                    <li>&nbsp;</li>
+                    <li class="col LabelsProyect">
+                        <%= image_tag("Oficina.png", width: '50px', class:"") %>
+                    </li>
+                    <li>&nbsp;</li>
+                    <li class="col LabelsProyect">
+                        <label class="LabelOficina LabelsProyectSedeMargin">Oficina</label>
+                    </li>                   
+                </ul>
+                <br>
+                <h5 id="sede" class="LabelsProyect LabelsProyectSede">Sede</h5>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="BoxDocumentoStyle BoxShadow">
+                <ul class="ListFormat">
+                    <li>&nbsp;</li>
+                    <li class="col LabelsProyect">
+                        <%= image_tag("Cedula.png", width: '50px', class:"") %>
+                    </li>
+                    <li>&nbsp;</li>
+                    <li class="col LabelsProyect">
+                        <label class="LabelDocumento LabelsProyectSedeMargin">Cédula</label>
+                    </li>                  
+                </ul>
+                <br>
+                <h5 id="documento" class="LabelsProyect LabelsProyectSede">ID</h5>
+            </div>            
+        </div>
+    </div>
+    &nbsp;&nbsp;<%= button_tag "Inicio", class: "ButtonGoBack ButtonInicio", :onclick => "GoToPortal()", remote: true %>
+</div>

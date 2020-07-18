@@ -1,0 +1,271 @@
+body
+ {    
+    /*background-color:#26C165 !important;*/
+    background-color:#9DD955 !important;;
+    /*background-image: url('Fondo-ruleta.png');*/
+    background-image: url('bg.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+ }
+
+html *
+{
+    font-family: 'Quicksand' !important;
+    font-weight: bold !important;
+}
+
+ .DivCenter
+ {
+	height:600px;
+	width:800px;    
+    background-repeat: none;
+	position:absolute;
+	margin:auto;
+	top:0;
+	left:0;
+	right:0;
+    bottom:0;
+    background: rgba(0,0,0,0.2);
+    border-radius:8px;
+}
+
+.Logo
+{
+    position: absolute;
+    top: 0px;
+    right: 6px;
+}
+
+.LogoSorteo
+{
+    position: absolute;
+    top: 40px;
+    right: 195px;
+}
+
+.ButtonGoBack
+{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.BannerText
+{
+    width: 150px;
+    background-color: white;
+    border-bottom-left-radius: 35px;
+    border-top-left-radius: 35px;
+}
+
+.Banner
+{    
+    background-image: linear-gradient(90deg, white, rgba(255,0,0,0));
+}
+
+.RowBanner
+{    
+    margin-left: 52px;
+    margin-top: 110px;
+    display: flex;
+}
+
+.ButtonInicio
+{
+    background-color: #8cbe4f;
+    color: white;
+    border: 0px;
+    border-radius: 0 13px 0 0;
+    padding: 4px 18px;
+}
+
+.ButtonStyle
+{
+    font-size: 14px !important;
+    border-radius: 20px !important;
+    text-transform: uppercase !important;
+    -webkit-box-shadow: 0px 22px 18px 0px rgba(0,0,0,0.16) !important;
+    -moz-box-shadow: 0px 22px 18px 0px rgba(0,0,0,0.16) !important;
+    box-shadow: 0px 22px 18px 0px rgba(0,0,0,0.16) !important;
+}
+
+.ButtonSorteoVivienda
+{
+    width: 230px;
+    background-color: #F1F1F1;
+    color: #8CBE4F;
+    white-space: normal !important;
+    height: 62px;
+}
+
+.ButtonMejoraVivienda
+{
+    width: 230px;
+    background-color: #251184;
+    color: #FFFFFF;
+    white-space: normal !important;
+    height: 62px;
+}
+
+.ButtonsActions
+{
+    text-align: center;
+    margin-top: 10px;    
+}
+
+.ListFormat
+{    
+    background-color: transparent;
+    border: none;
+}
+
+.ButtonConfianzaLogo
+{
+    /*background: url('Boton-confianza.png');*/
+    background-size: 250px 250px;
+    /*text-indent:30px;*/
+    display:block;
+    cursor: pointer;
+    width: 250px;
+    height: 250px;
+    border-style: none;
+}
+
+.RownTarjetas
+{
+    /*margin-left: 40px !important;*/
+    padding-left: 70px;
+    padding-right: 50px;
+}
+
+.RowStyleSorteo
+{
+    margin-left: 30px !important;
+    margin-top: 60px !important;
+}
+
+.ColumNombreGanador
+{
+    margin-top: 60px;
+    text-align: center;
+    font-family: 'ITC Avant Garde Std';
+}
+
+.TipoSorteo
+{
+    width: 430px;
+    color: #FFFFFF;
+    font-size: 23px;
+    text-transform: uppercase;
+}
+
+.TextNombreGanador
+{
+    padding-right: 25px;
+    padding-left: 25px;
+    display: block;
+    margin: 0 auto;
+}
+
+.ImageNombreGanador
+{
+    background-image: url('Fondo-ruleta-principal.png');
+    background-size: 430px;
+    width: 430px;
+    height: 85px;
+    vertical-align: middle;
+    display: table-cell;
+    color: #9DD955;
+    font-size: 25px;
+}
+
+.BoxTimeStyle
+{
+    width: 170px;
+    height: 200px;
+    border-radius: 2em;
+    background: rgb(94,81,158);
+    background: -moz-linear-gradient(180deg, rgba(94,81,158,1) 0%, rgba(37,17,132,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(94,81,158,1) 0%, rgba(37,17,132,1) 100%);
+    background: linear-gradient(180deg, rgba(94,81,158,1) 0%, rgba(37,17,132,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5e519e",endColorstr="#251184",GradientType=1);
+}
+
+.BoxSedeStyle
+{
+    width: 170px;
+    height: 240px;
+    background-color: #FFFFFF;
+    border-radius: 2em;
+}
+
+.BoxDocumentoStyle
+{
+    width: 170px;
+    height: 240px;
+    background-color: #FFFFFF;
+    border-radius: 2em;
+}
+
+.BoxShadow
+{
+    -webkit-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16) !important;
+    -moz-box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16) !important;
+    box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.16) !important;
+}
+
+.ListFormat
+{
+    width: 110px;
+    list-style-type: none;
+    display: table-cell;    
+}
+
+.LabelsProyect
+{
+    z-index: 1;
+    text-align: center;
+    margin-left: -6px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.LabelsProyectSede
+{
+    background-color: #f3f5f9;
+    padding: 11px 0 !important;
+    margin: auto 14px;
+    border-radius: 10px;
+}
+
+.LabelsProyectSedeMargin
+{
+    margin-bottom: 2%;
+}
+
+.LabelTiempo
+{
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.LabelTiempoNumero
+{
+    /*font-size: 42px !important;*/
+    font-size: 30px !important;
+    color: #FFFFFF;
+    margin-left: -14px;;
+}
+
+.LabelOficina
+{
+    font-size: 24px;
+    color: #8CBE4F;
+}
+
+.LabelDocumento
+{
+    font-size: 24px;
+    color: #1e7e34;
+}
